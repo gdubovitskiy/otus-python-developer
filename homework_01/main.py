@@ -47,3 +47,15 @@ def filter_numbers(numbers: list, filter_types: str) -> list[int]:
     >>> filter_numbers([2, 3, 4, 5], EVEN)
     <<< [2, 4]
     """
+    # проверку на четное/нечетное можно сделать несколькими способами:
+    # - самописная функция, которая передается в filter
+    # - lambda-функция (но становится тяжело-читемое)
+    # - способ, которым указал - кажется более прозрачный
+    if filter_types == ODD:
+        return [n for n in numbers if n % 2]
+    elif filter_types == EVEN:
+        return [n for n in numbers if not n % 2]
+    elif filter_types == PRIME:
+        return [n for n in filter(is_prime, numbers)]
+    else:
+        raise ValueError("Ошибка в аргументе `filter_types`. Он должен быть одним из списка: ODD,EVEN,PRIME")
