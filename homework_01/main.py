@@ -20,7 +20,23 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def filter_numbers():
+def is_prime(number: int, div: int = 2) -> bool:
+    """
+    Функция, которая определяет - просто число или нет
+    :param number: число
+    :param div: делитель, который нужен для рекурсии (по-умолчанию равен 2)
+    :return: True/False
+    """
+    if number < 2:
+        return False
+    if div == number:
+        return True
+    if number % div == 0:
+        return False
+    return is_prime(number, div + 1)
+
+
+def filter_numbers(numbers: list, filter_types: str) -> list[int]:
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
