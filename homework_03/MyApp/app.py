@@ -1,13 +1,6 @@
 from fastapi import FastAPI
 
+from view import router
+
 app = FastAPI()
-
-
-@app.get("/")
-def index_page():
-    return {"message": "Hello"}
-
-
-@app.get("/ping/")
-def ping_page():
-    return {"message": "pong"}
+app.include_router(router)
