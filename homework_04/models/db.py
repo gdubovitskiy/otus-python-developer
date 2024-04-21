@@ -9,8 +9,15 @@
 """
 
 import os
+from sqlalchemy import create_engine
+
+import homework_04.config as config
+
+os.environ["SQLALCHEMY_PG_CONN_URI"] = config.DB_URL
 
 PG_CONN_URI = os.environ.get("SQLALCHEMY_PG_CONN_URI") or "postgresql+asyncpg://postgres:password@localhost/postgres"
 
-Base = None
-Session = None
+engine = create_engine(
+    url=config.DB_URL,
+    echo=config.DB_ECHO,
+)
