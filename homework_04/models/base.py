@@ -1,5 +1,7 @@
-from sqlalchemy import Column, Integer
-from sqlalchemy.orm import DeclarativeBase, declared_attr
+from sqlalchemy import (Column,
+                        Integer)
+from sqlalchemy.orm import (DeclarativeBase,
+                            declared_attr)
 
 
 class Base(DeclarativeBase):

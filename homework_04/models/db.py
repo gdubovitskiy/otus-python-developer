@@ -9,9 +9,10 @@
 """
 
 import os
-from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
+from sqlalchemy.ext.asyncio import (create_async_engine,
+                                    async_sessionmaker)
 
-import homework_04.config as config
+import config as config
 
 os.environ["SQLALCHEMY_PG_CONN_URI"] = config.DB_URL
 
