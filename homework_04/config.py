@@ -9,3 +9,5 @@ DB_PORT = 5432
 DB_URL = f"postgresql+{DB_ENGINE}://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 DB_ECHO = True
 # DB_ECHO = False
+
+BASE_DATA_URL = 'https://jsonplaceholder.typicode.com'
