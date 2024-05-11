@@ -1,4 +1,4 @@
-DB_ENGINE = "psycopg"
+DB_ENGINE = "asyncpg"
 # DB_ENGINE = "pg8000"
 DB_USER = "user"
 DB_PASSWORD = "example"
