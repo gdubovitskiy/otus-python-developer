@@ -20,7 +20,7 @@ from models.base import Base
 
 
 class Post(Base):
-    user_id = Column(Integer, ForeignKey('users.user_id'), nullable=False)
+    user_id = Column(Integer, ForeignKey('users.id'), nullable=False)
     title = Column(String, nullable=False, default="", server_default="")
     body = Column(Text, nullable=False, default="", server_default="")
 
