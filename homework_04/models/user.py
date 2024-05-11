@@ -14,7 +14,7 @@ from sqlalchemy import (
 
 from sqlalchemy.orm import relationship
 
-from homework_04.models.base import Base
+from models.base import Base
 
 
 class User(Base):
