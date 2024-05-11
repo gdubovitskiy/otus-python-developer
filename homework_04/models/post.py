@@ -37,7 +37,8 @@ class Post(Base):
         return (
             f"{self.__class__.__name__}("
             f"id={self.id}, "
-            f"username={self.username!r}, "
-            f"email={self.email!r}"
+            f"user_id={self.user_id!r}, "
+            f"title={self.title!r}"
+            f"body={self.body!r}"
             f")"
         )

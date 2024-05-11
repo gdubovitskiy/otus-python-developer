@@ -35,6 +35,7 @@ class User(Base):
             f"{self.__class__.__name__}("
             f"id={self.id}, "
             f"username={self.username!r}, "
+            f"name={self.name!r}, "
             f"email={self.email!r}"
             f")"
         )
