@@ -9,7 +9,7 @@
 """
 
 import os
-from sqlalchemy import create_engine
+from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 
 import homework_04.config as config
 
@@ -17,7 +17,13 @@ os.environ["SQLALCHEMY_PG_CONN_URI"] = config.DB_URL
 
 PG_CONN_URI = os.environ.get("SQLALCHEMY_PG_CONN_URI") or "postgresql+asyncpg://postgres:password@localhost/postgres"
 
-engine = create_engine(
+async_engine = create_async_engine(
     url=config.DB_URL,
     echo=config.DB_ECHO,
+)
+
+async_session = async_sessionmaker(
+    bind=async_engine,
+    autocommit=False,
+    expire_on_commit=False,
 )
