@@ -12,7 +12,7 @@ import os
 from sqlalchemy.ext.asyncio import (create_async_engine,
                                     async_sessionmaker)
 
-import config as config
+import configs.config as config
 
 os.environ["SQLALCHEMY_PG_CONN_URI"] = config.DB_URL
 
@@ -26,5 +26,5 @@ async_engine = create_async_engine(
 async_session = async_sessionmaker(
     bind=async_engine,
     autocommit=False,
-    expire_on_commit=False,
+    expire_on_commit=False, # чтобы повторно не обращаться в БД за данными
 )
