@@ -23,7 +23,7 @@ async_engine = create_async_engine(
     echo=config.DB_ECHO,
 )
 
-async_session = async_sessionmaker(
+Session = async_sessionmaker(
     bind=async_engine,
     autocommit=False,
     expire_on_commit=False, # чтобы повторно не обращаться в БД за данными

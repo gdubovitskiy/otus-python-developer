@@ -26,7 +26,7 @@ from models import (
     Post,
     User
 )
-from models.db import async_session, async_engine
+from models.db import Session, async_engine
 
 
 async def create_users(
@@ -75,7 +75,7 @@ async def async_main():
         fetch_posts_data(),
     )
 
-    async with async_session() as session:
+    async with Session() as session:
         await create_users(session, *users_data)
         await create_posts(session, *posts_data)
 
