@@ -1,8 +1,8 @@
 DB_ENGINE = "asyncpg"
 # DB_ENGINE = "pg8000"
-DB_USER = "user"
-DB_PASSWORD = "example"
-DB_NAME = "blog"
+DB_USER = "postgres"
+DB_PASSWORD = "secretpassword"
+DB_NAME = "postgres"
 DB_HOST = "localhost"
 DB_PORT = 5432
 
