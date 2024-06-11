@@ -14,8 +14,6 @@ from sqlalchemy.ext.asyncio import (create_async_engine,
 
 import configs.config as config
 
-os.environ["SQLALCHEMY_PG_CONN_URI"] = config.DB_URL
-
 PG_CONN_URI = os.environ.get("SQLALCHEMY_PG_CONN_URI") or "postgresql+asyncpg://postgres:password@localhost/postgres"
 
 async_engine = create_async_engine(
