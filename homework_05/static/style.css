@@ -1,0 +1,11 @@
+#wrapper {
+  width: 900px;
+  margin: 0 auto 50px;
+}
+h1 {
+  text-align: center;
+  text-shadow: 0 1px 2px #8a8a8a;
+  padding: 2px;
+  border-bottom: 1px solid #a85ba6;
+  min-height: 70px;
+}
