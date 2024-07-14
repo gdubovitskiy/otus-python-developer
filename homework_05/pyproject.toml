@@ -4,10 +4,6 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
-aiohttp = "^3.9.5"
-SQLAlchemy = {extras = ["asyncio"], version = "^2.0.30"}
-asyncpg = "^0.29.0"
-alembic = "^1.13.1"
 flask = "^3.0.3"
 
 [tool.poetry.group.dev.dependencies]
